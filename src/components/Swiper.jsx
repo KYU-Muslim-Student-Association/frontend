@@ -53,7 +53,7 @@ export default function App() {
             >
               WELCOME TO KYUMSA COMMUNITY
             </Typography>
-            <Button variant='contained'>Get Started</Button>
+            <Button variant='contained' sx={{ bgcolor:'#c98d83'}}>Get Started</Button>
           </Box>
         </SwiperSlide>
 
@@ -84,7 +84,7 @@ export default function App() {
             >
               WELCOME TO KYUMSA COMMUNITY
             </Typography>
-            <Button variant='contained'>Get Started</Button>
+            <Button variant='contained' sx={{bgcolor:'#c98d83'}}>Get Started</Button>
           </Box>
         </SwiperSlide>
       </Swiper>

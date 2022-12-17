@@ -5,6 +5,7 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
+  "prefer-related-applications": true,
   "icons": [
     {
       "src": "favicon.ico",
@@ -12,17 +13,17 @@
       "type": "image/x-icon"
     },
     {
-      "src": "netflix128.png",
+      "src": "test.png",
       "type": "image/png",
       "sizes": "128x128"
     },
     {
-      "src": "netflix512.png",
+      "src": "test512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "netflix512.png",
+      "src": "test512.png",
       "sizes": "512x512",
       "type": "images/png",
       "purpose": "maskable"
