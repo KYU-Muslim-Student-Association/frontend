@@ -19,7 +19,6 @@ const pages = ['Home', 'About', 'Gallery', 'Scholars', 'Contact Us'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -30,17 +29,12 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (

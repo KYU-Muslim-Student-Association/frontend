@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Grid, Typography, Box, Button, CssBaseline } from '@mui/material';
+import { Typography, Box, Button } from '@mui/material';
 import slider1 from '../assets/images/slider1.jpg';
 import slider2 from '../assets/images/slider2.jpg';
 
