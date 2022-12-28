@@ -2,12 +2,14 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Typography, Box, Button } from '@mui/material';
-import slider1 from '../assets/one.jpg';
-import slider2 from '../assets/three.jpg';
+import slider1 from '../assets/three.jpg';
+import slider2 from '../assets/one.jpg';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+
+
 
 // import required modules
 import { Navigation } from 'swiper';
@@ -29,13 +31,21 @@ export default function App() {
             style={{ objectFit: 'cover' }}
           />
           <Box
+            sx ={{
+              width: {
+                xs: '90%', // theme.breakpoints.up('xs')
+                sm: '80%', // theme.breakpoints.up('sm')
+                md: '60%', // theme.breakpoints.up('md')
+                // theme.breakpoints.up('xl')
+              },
+            }}
             style={{
               position: 'absolute',
               top: '45%',
               left: '50%',
               transform: `translate(-50%,-50%)`,
               marginTop: 0,
-              textAlign:'center'
+              textAlign:'center',
 
             }}
           >
@@ -63,7 +73,9 @@ export default function App() {
               left: '50%',
               transform: `translate(-50%,-50%)`,
               marginTop: 0,
-              textAlign:'center'
+              textAlign:'center',
+              width:{xs:100}
+              
 
             }}
           >
