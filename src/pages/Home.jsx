@@ -1,4 +1,5 @@
 import React from 'react'
+import About from '../components/About'
 import Navigation from '../components/Navigation'
 import Slides from '../components/Swiper'
 
@@ -7,6 +8,7 @@ const Home = () => {
     <>
       <Navigation />
       <Slides />
+      <About />
     </>
   )
 }

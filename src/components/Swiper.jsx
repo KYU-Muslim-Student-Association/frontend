@@ -55,7 +55,8 @@ export default function App() {
               sx={{
                 marginBottom:'20px',
                 textAlign: 'center',
-                typography: {md:'h2',sm: 'h4', xs:'h4'}
+                typography: {md:'h2',sm: 'h4', xs:'h4'},
+                fontWeight:'bolder'
               }}
             >
               WELCOME TO KYUMSA COMMUNITY
