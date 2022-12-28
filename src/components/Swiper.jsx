@@ -2,8 +2,8 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Typography, Box, Button } from '@mui/material';
-import slider1 from '../assets/images/slider1.jpg';
-import slider2 from '../assets/images/slider2.jpg';
+import slider1 from '../assets/one.jpg';
+import slider2 from '../assets/three.jpg';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -31,7 +31,7 @@ export default function App() {
           <Box
             style={{
               position: 'absolute',
-              top: '50%',
+              top: '45%',
               left: '50%',
               transform: `translate(-50%,-50%)`,
               marginTop: 0,
@@ -45,10 +45,7 @@ export default function App() {
               sx={{
                 marginBottom:'20px',
                 textAlign: 'center',
-                fontSize: {
-                  md: 60,
-                  xs: 17,
-                },
+                typography: {md:'h2',sm: 'h4', xs:'h4'}
               }}
             >
               WELCOME TO KYUMSA COMMUNITY
@@ -62,7 +59,7 @@ export default function App() {
           <Box
             style={{
               position: 'absolute',
-              top: '50%',
+              top: '45%',
               left: '50%',
               transform: `translate(-50%,-50%)`,
               marginTop: 0,
@@ -76,10 +73,7 @@ export default function App() {
               sx={{
                 marginBottom:'20px',
                 textAlign: 'center',
-                fontSize: {
-                  md: 60,
-                  xs: 17,
-                },
+                typography: {md:'h2',sm: 'h4', xs:'h4'}
               }}
             >
               WELCOME TO KYUMSA COMMUNITY
