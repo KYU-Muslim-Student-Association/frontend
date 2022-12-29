@@ -5,7 +5,6 @@ import Gallery3 from '../assets/images/gallery3.jpg';
 import Gallery4 from '../assets/images/gallery4.jpg';
 import Gallery5 from '../assets/images/gallery5.jpg';
 import Gallery6 from '../assets/images/gallery6.jpg';
-import { Grid } from '@mui/material';
 
 import LightGallery from 'lightgallery/react';
 
@@ -34,42 +33,66 @@ const Gallery = () => {
         elementClassNames='lightbox'
       >
         <a href={Gallery2} className='column' style={{ display: 'grid' }}>
-          <img src={Gallery2} alt='' style={{height:'100%', width:'100%' , objectFit:'cover'}} />
+          <img
+            src={Gallery2}
+            alt=''
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          />
           <div className='icons'>
             <i className='fas fa-plus'></i>
           </div>
         </a>
 
         <a href={Gallery3} className='column'>
-          <img src={Gallery3} alt='' style={{height:'100%', width:'100%' , objectFit:'cover'}} />
+          <img
+            src={Gallery3}
+            alt=''
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          />
           <div className='icons'>
             <i className='fas fa-plus'></i>
           </div>
         </a>
 
         <a href={Gallery4} className='column'>
-          <img src={Gallery4} alt='' style={{height:'100%', width:'100%' , objectFit:'cover'}} />
+          <img
+            src={Gallery4}
+            alt=''
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          />
           <div className='icons'>
             <i className='fas fa-plus'></i>
           </div>
         </a>
 
         <a href={Gallery5} className='column'>
-          <img src={Gallery5} alt='' style={{height:'100%', width:'100%' , objectFit:'cover'}}/>
+          <img
+            src={Gallery5}
+            alt=''
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          />
           <div className='icons'>
             <i className='fas fa-plus'></i>
           </div>
         </a>
 
         <a href={Gallery6} className='column'>
-          <img src={Gallery6} alt='' style={{height:'100%', width:'100%' , objectFit:'cover'}} />
+          <img
+            src={Gallery6}
+            alt=''
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          />
           <div className='icons'>
             <i className='fas fa-plus'></i>
           </div>
         </a>
 
         <a href={Gallery1} className='column'>
-          <img src={Gallery1} alt='' style={{height:'100%', width:'100%' , objectFit:'cover'}} />
+          <img
+            src={Gallery1}
+            alt=''
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          />
           <div className='icons'>
             <i className='fas fa-plus'></i>
           </div>
