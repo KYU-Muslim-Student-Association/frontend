@@ -28,7 +28,7 @@ const About = () => {
         <Grid item xs={12} sm={8} md={6}>
           <ImageListItem>
             <Typography variant='h4' fontWeight={700}>
-              good things come to those{' '}
+              Good things come to those{' '}
               <span style={{ color: '#c98d83' }}>who help </span> others
             </Typography>
             <Typography variant='body1' style={{ paddingTop: '20px' }}>
