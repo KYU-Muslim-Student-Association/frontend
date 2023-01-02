@@ -1,4 +1,4 @@
-import { Button, Container, Typography } from '@mui/material';
+import { Button, Container } from '@mui/material';
 import React from 'react';
 
 const ContactUs = () => {

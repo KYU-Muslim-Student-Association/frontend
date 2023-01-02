@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+
 
 const Footer = () => {
   return (
@@ -8,18 +11,14 @@ const Footer = () => {
         <div class="box">
           <h3>address</h3>
           <p>Stay connected to us through our social media platforms .</p>
-          <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-          </div>
+    
         </div>
 
         <div class="box">
           <h3>E-mail</h3>
-          <a href="#" class="link">kyumsa@gmail.com</a>
-          <a href="#" class="link">kyumsa@gmail.com</a>
+          <Link to='#' className='link'>kyumsa@gmail.com</Link>
+          <Link to='#' className='link'>kyumsa@gmail.com</Link>
+       
         </div>
 
         <div class="box">
