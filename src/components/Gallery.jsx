@@ -16,13 +16,14 @@ import 'lightgallery/css/lg-thumbnail.css';
 // import plugins if you need
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
+import { Box } from '@mui/material';
 
 const Gallery = () => {
   const onInit = () => {
     console.log('lightGallery has been initialized');
   };
   return (
-    <>
+    <Box mb={5}>
       <h1 className='heading'>
         our <span> gallery</span>
       </h1>
@@ -98,7 +99,7 @@ const Gallery = () => {
           </div>
         </a>
       </LightGallery>
-    </>
+    </Box>
   );
 };
 

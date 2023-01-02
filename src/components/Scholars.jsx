@@ -1,63 +1,53 @@
+import { Container, maxHeight } from '@mui/system';
 import React from 'react';
+
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Box, Button, CardActionArea, CardActions } from '@mui/material';
 //import team images
 import team1 from '../assets/images/team-1.png';
 import team2 from '../assets/images/team-2.png';
 import team3 from '../assets/images/team-3.png';
+import MultiActionAreaCard from './Card';
+
+import Grid from '@mui/material/Grid';
+
 
 const Scholars = () => {
   return (
-    <section className='team' id='team'>
-      <h1 className='heading'>
-        our <span>Scholars</span>
-      </h1>
+    <Box m={12}>
+        <h1 class="heading"><span>Our</span> Scholars</h1>
+       <Grid container spacing={1}>
 
-      <div className='box-container'>
-        <div className='box'>
-          <div className='image'>
-            <img src={team1} alt='' />
-          </div>
-          <div className='content'>
-            <h3>Sheikh Ali</h3>
-            <p>Dawa'ah Chairman</p>
-            <div className='share'>
-              <i className='fab fa-facebook-f'></i>
-              <i className='fab fa-twitter'></i>
-              <i className='fab fa-instagram'></i>
-            </div>
-          </div>
-        </div>
+        <Grid item xs={12}  md={4}>
+          <MultiActionAreaCard
+            name='Hamisi Ali'
+            bio='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+            img={team1}
+          />
+        </Grid>
 
-        <div className='box'>
-          <div className='image'>
-            <img src={team2} alt='' />
-          </div>
-          <div className='content'>
-            <h3>Sheikh Ibrahim</h3>
-            <p>Dawa'ah Coordinator</p>
-            <div className='share'>
-              <i className='fab fa-facebook-f'></i>
-              <i className='fab fa-twitter'></i>
-              <i className='fab fa-instagram'></i>
-            </div>
-          </div>
-        </div>
+        <Grid item xs={12} md={4}>
+        <MultiActionAreaCard
+            name='Sala Maalim'
+            bio='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+            img={team2}
+          />
+        </Grid>
+        <Grid item xs={12} md={4}>
+        <MultiActionAreaCard
+            name='Abubakar Ali'
+            bio='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+            img={team3}
+          />
+        </Grid>
+       
+    </Grid>
 
-        <div className='box'>
-          <div className='image'>
-            <img src={team3} alt='' />
-          </div>
-          <div className='content'>
-            <h3>Sh Hamisi</h3>
-            <p>Chairman</p>
-            <div className='share'>
-              <i className='fab fa-facebook-f'></i>
-              <i className='fab fa-twitter'></i>
-              <i className='fab fa-instagram'></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
+    </Box>
   );
 };
 

@@ -10,7 +10,7 @@ import {
 
 const About = () => {
   return (
-    <Container>
+    <Container >
       <h1 class='heading'>
         <span>about</span> us
       </h1>
