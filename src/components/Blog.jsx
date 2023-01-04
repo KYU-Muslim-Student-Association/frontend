@@ -29,6 +29,7 @@ const Blog = () => {
         All <span>Blogs</span>
       </h1>
 
+      {/* eslint-disable-next-line array-callback-return */}
       {blogs.map((blog, index) => {
         count++;
         items = [
