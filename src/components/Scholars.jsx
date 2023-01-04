@@ -11,31 +11,34 @@ import Grid from '@mui/material/Grid';
 
 const Scholars = () => {
   return (
-    <Box m={12} sx={{ margin: { xs: '2rem' } }}>
+    <Box sx={{ margin: { xs: '2rem' , md:'6rem'} }}>
       <h1 class='heading'>
-        <span>Our</span> Scholars
+        <span>Our</span> Leadership <span>Team</span>
       </h1>
       <Grid container spacing={1}>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <MultiActionAreaCard
             name='Hamisi Ali'
-            bio='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+            bio='Chairman'
             img={team1}
+            props={{ display: 'blog' }}
           />
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <MultiActionAreaCard
             name='Sala Maalim'
-            bio='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+            bio='Tresurer'
             img={team2}
+            props={{ display: 'blog' }}
           />
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} sm={6} md={4}>
           <MultiActionAreaCard
             name='Abubakar Ali'
-            bio='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+            bio='Assistant Chairman'
             img={team3}
+            props={{ display: 'blog' }}
           />
         </Grid>
       </Grid>

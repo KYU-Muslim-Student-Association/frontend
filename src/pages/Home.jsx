@@ -6,12 +6,9 @@ import Gallery from '../components/Gallery';
 import Scholars from '../components/Scholars';
 import ContactUs from '../components/ContactUs';
 import Footer from '../components/Footer';
-
-
-
+import Blog from '../components/Blog';
 
 const Home = () => {
-
   return (
     <>
       <Navigation />
@@ -19,6 +16,7 @@ const Home = () => {
       <About />
       <Gallery />
       <Scholars />
+      <Blog />
       <ContactUs />
       <Footer />
     </>
