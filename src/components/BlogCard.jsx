@@ -7,9 +7,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
-export default function MediaCard({ name, bio, img, props }) {
+export default function MediaCard({ name, bio, img, id }) {
   return (
-    <Link to={`/blogs/test`}>
+    <Link to={`/blogs/${id}`}>
       <Card sx={{ maxWidth: { xs: 450, md: 345 } }}>
         <CardMedia sx={{ height: 140 }} image={img} title='blog image' />
         <CardContent>

@@ -15,6 +15,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "contentful": "^9.2.15",
     "framer-motion": "^8.0.2",
     "lightgallery": "^2.7.0",
     "react": "^18.2.0",
@@ -41,6 +42,10 @@
       "react-app/jest"
     ]
   },
+  "resolutions": {
+    "//": "See https://github.com/facebook/create-react-app/issues/11773",
+    "react-error-overlay": "6.0.9"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -52,5 +57,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-error-overlay": "^6.0.9"
   }
 }

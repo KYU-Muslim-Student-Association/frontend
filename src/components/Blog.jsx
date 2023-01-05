@@ -2,12 +2,32 @@ import React from 'react';
 import Container from '@mui/material/Container';
 
 import MediaCard from '../components/BlogCard';
-import { blogs } from '../data/dummyblog';
+
 import 'react-alice-carousel/lib/alice-carousel.css';
 import AliceCarousel from 'react-alice-carousel';
-
+import { createClient } from 'contentful';
 
 const Blog = () => {
+  const client = createClient({
+    space: 'whl0ksckl8aj',
+    accessToken: 'ga3QyyQ7CzFfHql_YPDNfH7hszJzI8muREAJEYXcTgs',
+    withCredentials: false,
+  });
+
+  const [blogs, setBlogs] = React.useState([]);
+  React.useEffect(() => {
+    const getAllEntries = async () => {
+      try {
+        await client.getEntries().then((response) => {
+          setBlogs(response);
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getAllEntries();
+  }, []);
   let items = [];
   let count = 0;
   const responsive = {
@@ -30,14 +50,15 @@ const Blog = () => {
       </h1>
 
       {/* eslint-disable-next-line array-callback-return */}
-      {blogs.map((blog, index) => {
+      {blogs?.items?.map((blog, index) => {
         count++;
         items = [
           ...items,
           <MediaCard
-            name={blog.node.title}
-            bio={blog.node.description}
-            img={blog.node.image}
+            name={blog.fields.blogTitle}
+            bio={blog.fields.blogSummary}
+            img={blog.fields.blogImage.fields.file.url}
+            id={blog.sys.id}
             data-value={count}
           />,
         ];
