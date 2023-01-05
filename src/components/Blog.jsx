@@ -27,7 +27,7 @@ const Blog = () => {
     };
 
     getAllEntries();
-  }, []);
+  }, );
   let items = [];
   let count = 0;
   const responsive = {

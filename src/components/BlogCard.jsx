@@ -8,10 +8,11 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 export default function MediaCard({ name, bio, img, id }) {
+
   return (
     <Link to={`/blogs/${id}`}>
       <Card sx={{ maxWidth: { xs: 450, md: 345 } }}>
-        <CardMedia sx={{ height: 140 }} image={img} title='blog image' />
+        <CardMedia sx={{ height: 140 }} image={`https:${img}`} title='blog image' />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
             {name}
