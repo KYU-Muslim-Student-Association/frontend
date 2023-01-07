@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@mui/material/Container';
 
 import MediaCard from '../components/BlogCard';
+import Typography from '@mui/material/Typography';
 
 import 'react-alice-carousel/lib/alice-carousel.css';
 import AliceCarousel from 'react-alice-carousel';
@@ -27,7 +28,7 @@ const Blog = () => {
     };
 
     getAllEntries();
-  }, );
+  });
   let items = [];
   let count = 0;
   const responsive = {
@@ -45,9 +46,9 @@ const Blog = () => {
   };
   return (
     <Container maxWidth='xl'>
-      <h1 className='heading' variant='h4'>
-        All <span>Blogs</span>
-      </h1>
+      <Typography className='heading' variant='h3'>
+        <span>Blogs</span>
+      </Typography>
 
       {/* eslint-disable-next-line array-callback-return */}
       {blogs?.items?.map((blog, index) => {

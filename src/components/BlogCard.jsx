@@ -8,17 +8,21 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 export default function MediaCard({ name, bio, img, id }) {
-
   return (
-    <Link to={`/blogs/${id}`}>
+    <Link to={`/blogs/${id}`} style={{ textDecoration: 'none' }}>
       <Card sx={{ maxWidth: { xs: 450, md: 345 } }}>
-        <CardMedia sx={{ height: 140 }} image={`https:${img}`} title='blog image' />
+        <CardMedia
+          sx={{ height: 140 }}
+          image={`https:${img}`}
+          title='blog image'
+        />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
             {name}
           </Typography>
           <Typography variant='body2' color='text.secondary'>
-            {bio}
+            {bio.substring(0, 150)}
+            {bio.length > 150 && '...'}
           </Typography>
         </CardContent>
         <CardActions>
