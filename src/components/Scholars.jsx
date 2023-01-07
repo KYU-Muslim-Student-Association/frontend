@@ -6,15 +6,16 @@ import team1 from '../assets/images/team-1.png';
 import team2 from '../assets/images/team-2.png';
 import team3 from '../assets/images/team-3.png';
 import MultiActionAreaCard from './Card';
+import Typography from '@mui/material/Typography';
 
 import Grid from '@mui/material/Grid';
 
 const Scholars = () => {
   return (
     <Box sx={{ margin: { xs: '2rem' , md:'6rem'} }}>
-      <h1 class='heading'>
+      <Typography variant='h3' className='heading'>
         <span>Our</span> Leadership <span>Team</span>
-      </h1>
+      </Typography>
       <Grid container spacing={1}>
         <Grid item xs={12} sm={6} md={4}>
           <MultiActionAreaCard

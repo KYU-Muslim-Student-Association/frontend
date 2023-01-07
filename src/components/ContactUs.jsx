@@ -1,35 +1,35 @@
-import { Button, Container } from '@mui/material';
+import { Button, Container, TextField, Typography } from '@mui/material';
+
 import React from 'react';
 
 const ContactUs = () => {
   return (
-    <Container className='contact'>
-      <h1 class='heading'>
-        <span>Contact</span> Us
-      </h1>
-
-      <div className='row'>
-        <form action=''>
-          <div className='inputBox'>
-            <input type='email' placeholder='email address' />
-          </div>
-
-          <textarea
-            placeholder='Message'
-            name=''
-            id=''
-            cols='30'
-            rows='10'
-          ></textarea>
-          <Button
-            type='submit'
-            variant='contained'
-            style={{ backgroundColor: '#c98d83' }}
-          >
-            Submit
-          </Button>
-        </form>
-      </div>
+    <Container style={{ marginTop: '80px', marginBottom:'60px' }}>
+      <Typography variant='h3' style={{ marginBottom: '32px', textAlign: 'center' }} className='heading'>
+        <span style={{ color: 'primary' }}>Contact</span> Us
+      </Typography>
+      <form action="" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <TextField
+          style={{ marginBottom: '16px', width: '50%' }}
+          label="Email address"
+          type="email"
+          variant="outlined"
+        />
+        <TextField
+          style={{ marginBottom: '16px', width: '50%', resize: 'vertical' }}
+          label="Message"
+          multiline
+          rows={4}
+          variant="outlined"
+        />
+        <Button
+          style={{ width: '25%', backgroundColor: '#c98d83' }}
+          type="submit"
+          variant="contained"
+        >
+          Submit
+        </Button>
+      </form>
     </Container>
   );
 };

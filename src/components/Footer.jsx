@@ -1,38 +1,42 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Grid, Typography } from '@mui/material';
 
 const Footer = () => {
   return (
-    
-    <section class="footer">
-      <div class="box-container">
-        <div class="box">
-          <h3>address</h3>
-          <p>Stay connected to us through our social media platforms .</p>
-    
-        </div>
+    <footer
+      style={{ backgroundColor: '#f2f1ec', color: 'black', padding: '24px' }}
+    >
+      <Grid container justify='space-evenly'>
+        <Grid item xs={12} sm={4} style={{ textAlign: 'center' }}>
+          <Typography variant='h6' gutterBottom>
+            Address
+          </Typography>
+          <Typography variant='subtitle1'>
+            Stay connected to us through our social media platforms.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={4} style={{ textAlign: 'center' }}>
+          <Typography variant='h6' gutterBottom>
+            E-mail
+          </Typography>
+          <Link to='#'>kyumsa@gmail.com</Link>
+          <br />
+          <Link to='#'>kyumsa@gmail.com</Link>
+        </Grid>
+        <Grid item xs={12} sm={4} style={{ textAlign: 'center' }}>
+          <Typography variant='h6' gutterBottom>
+            Call us
+          </Typography>
+          <Typography variant='subtitle1'>+254 720555703</Typography>
+          <Typography variant='subtitle1'>+254 720555703</Typography>
+        </Grid>
+      </Grid>
+      <Typography style={{ marginTop: '32px' }} variant='body2' align='center'>
+        Created by <Link to='#'>Kymsa Developers</Link> All rights reserved!
+      </Typography>
+    </footer>
+  );
+};
 
-        <div class="box">
-          <h3>E-mail</h3>
-          <Link to='#' className='link'>kyumsa@gmail.com</Link>
-          <Link to='#' className='link'>kyumsa@gmail.com</Link>
-       
-        </div>
-
-        <div class="box">
-          <h3>call us</h3>
-          <p>+254 720555703</p>
-          <p>+254 720555703</p>
-        </div>
-      </div>
-
-      <div class="credit">
-        created by <span>kymsa developers</span> all rights reserved!
-      </div>
-    </section>
-  )
-}
-
-export default Footer
+export default Footer;

@@ -7,6 +7,7 @@ import Gallery5 from '../assets/images/gallery5.jpg';
 import Gallery6 from '../assets/images/gallery6.jpg';
 
 import LightGallery from 'lightgallery/react';
+import Typography from '@mui/material/Typography';
 
 // import styles
 import 'lightgallery/css/lightgallery.css';
@@ -24,9 +25,9 @@ const Gallery = () => {
   };
   return (
     <Box mb={5}>
-      <h1 className='heading'>
+      <Typography variant='h2' className='heading'>
         our <span> gallery</span>
-      </h1>
+      </Typography>
       <LightGallery
         onInit={onInit}
         speed={500}
