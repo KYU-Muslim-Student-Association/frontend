@@ -10,13 +10,13 @@ import { Link } from 'react-router-dom';
 export default function MediaCard({ name, bio, img, id }) {
   return (
     <Link to={`/blogs/${id}`} style={{ textDecoration: 'none' }}>
-      <Card sx={{ maxWidth: { xs: 450, md: 345 } }}>
+      <Card sx={{ maxWidth: { xs: 450, md: 345 }, minHeight: '25rem' }}>
         <CardMedia
           sx={{ height: 140 }}
           image={`https:${img}`}
           title='blog image'
         />
-        <CardContent>
+        <CardContent sx={{ height: '50%' }}>
           <Typography gutterBottom variant='h5' component='div'>
             {name}
           </Typography>
@@ -25,7 +25,7 @@ export default function MediaCard({ name, bio, img, id }) {
             {bio.length > 150 && '...'}
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions sx={{ height: '50%' }}>
           <Button size='small'>Read More</Button>
         </CardActions>
       </Card>

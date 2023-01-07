@@ -1,34 +1,44 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
 
-export default function MultiActionAreaCard({ name, bio, img}) {
+
+export default function MultiActionAreaCard({ name, bio, img }) {
   const styles = {
-    popup:{
-      display:'flex',
-      justifyContent:'center',
-      alignItems:'center',
-      flexDirection:'column'
-    }
+    card: {
+      maxWidth: 500,
+    },
+    media: {
+      height: 300,
+    },
+    content: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+    },
   };
+
   return (
-    <Card sx={{ maxWidth: 500 }}>
+    <Card style={styles.card}>
       <CardActionArea>
-        <CardMedia component='img' height='300' image={img} alt='scholars' />
-        <CardContent style={styles.popup}>
-          <Typography gutterBottom variant='h5' component='div'>
+        <CardMedia style={styles.media} image={img} title={name} />
+        <CardContent style={styles.content}>
+          <Typography gutterBottom variant="h5" component="h2">
             {name}
           </Typography>
-          <Typography variant='body2' color='text.secondary'>
+          <Typography variant="body2" color="textSecondary">
             {bio}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions style={styles.popup}>
-        <Button size='small' color='primary'>
+      <CardActions style={styles.content}>
+        <Button size="small" color="primary">
           abubakarali3w@gmail.com
         </Button>
       </CardActions>

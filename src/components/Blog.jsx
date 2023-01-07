@@ -28,13 +28,11 @@ const Blog = () => {
     };
 
     getAllEntries();
-  });
+  }, [client]);
   let items = [];
-  let count = 0;
   const responsive = {
     0: {
       items: 1,
-      itemsFit: 'fill',
     },
     568: {
       items: 2,
@@ -44,15 +42,15 @@ const Blog = () => {
       itemsFit: 'contain',
     },
   };
+
   return (
-    <Container maxWidth='xl'>
+    <Container maxWidth='lg'>
       <Typography className='heading' variant='h3'>
         <span>Blogs</span>
       </Typography>
 
       {/* eslint-disable-next-line array-callback-return */}
       {blogs?.items?.map((blog, index) => {
-        count++;
         items = [
           ...items,
           <MediaCard
@@ -60,17 +58,12 @@ const Blog = () => {
             bio={blog.fields.blogSummary}
             img={blog.fields.blogImage.fields.file.url}
             id={blog.sys.id}
-            data-value={count}
+            key={index}
           />,
         ];
       })}
 
-      <AliceCarousel
-        mouseTracking
-        items={items}
-        controlsStrategy='alternate'
-        responsive={responsive}
-      />
+      <AliceCarousel mouseTracking items={items} responsive={responsive} />
     </Container>
   );
 };

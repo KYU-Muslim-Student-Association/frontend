@@ -71,6 +71,14 @@ const BlogTemplate = () => {
   return (
     <Container maxWidth='md'>
       <Box xs={{ margin: '1rem 0' }}>
+        <Typography
+          variant='h4'
+          component='h4'
+          sx={{ textDecoration: 'none' }}
+          gutterBottom
+        >
+          <Link to='/'>Home</Link>
+        </Typography>
         <header className='post-header'>
           {singleBlogPost.fields && (
             <img
