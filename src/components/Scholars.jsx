@@ -12,8 +12,8 @@ import Grid from '@mui/material/Grid';
 
 const Scholars = () => {
   return (
-    <Box sx={{ margin: { xs: '2rem', md: '6rem' } }}>
-      <Typography variant='h3' className='heading'>
+    <Box sx={{ margin: { xs: '2rem', md: '6rem' } }} id='leaders'>
+      <Typography variant='h3' className='heading' sx={{fontWeight:'900'}}>
         <span>Our</span> Leadership <span>Team</span>
       </Typography>
       <Grid container spacing={1}>

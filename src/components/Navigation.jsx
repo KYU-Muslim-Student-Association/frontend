@@ -15,7 +15,7 @@ import AddCardIcon from '@mui/icons-material/AddCard';
 import { CssBaseline } from '@mui/material';
 import Drawer from '@mui/material/Drawer';
 
-const pages = ['Home', 'About', 'Gallery', 'Scholars', 'Contact Us'];
+const pages = ['Home', 'About', 'Gallery', 'Leaders', 'ContactUs'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -30,11 +30,9 @@ function ResponsiveAppBar() {
     setAnchorElNav(event.currentTarget);
   };
 
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -50,11 +48,7 @@ function ResponsiveAppBar() {
   return (
     <Box>
       <CssBaseline />
-      <AppBar
-        position='static'
-        sx={{ bgcolor: 'whitesmoke', color: 'black' }}
-        elevation
-      >
+      <AppBar position='static' sx={{ bgcolor: 'whitesmoke', color: 'black' }}>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
             <Typography
@@ -117,7 +111,14 @@ function ResponsiveAppBar() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign='center'>{page}</Typography>
+                    <Typography
+                      textAlign='center'
+                      onClick={() => {
+                        window.location.replace(`/#${page.toLowerCase()}`);
+                      }}
+                    >
+                      {page}
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -159,7 +160,14 @@ function ResponsiveAppBar() {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'black', display: 'block' }}
                 >
-                  {page}
+                  <Typography
+                    textAlign='center'
+                    onClick={() => {
+                      window.location.replace(`/#${page.toLowerCase()}`);
+                    }}
+                  >
+                    {page}
+                  </Typography>
                 </Button>
               ))}
             </Box>

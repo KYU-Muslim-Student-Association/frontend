@@ -4,8 +4,8 @@ import React from 'react';
 
 const ContactUs = () => {
   return (
-    <Container style={{ marginTop: '80px', marginBottom:'60px' }}>
-      <Typography variant='h3' style={{ marginBottom: '32px', textAlign: 'center' }} className='heading'>
+    <Container style={{ marginTop: '80px', marginBottom:'60px' }} id='contactus'>
+      <Typography variant='h3' style={{ marginBottom: '32px', textAlign: 'center' }} className='heading' fontWeight={900}>
         <span style={{ color: 'primary' }}>Contact</span> Us
       </Typography>
       <form action="" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

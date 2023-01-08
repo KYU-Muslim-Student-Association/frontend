@@ -24,8 +24,8 @@ const Gallery = () => {
     console.log('lightGallery has been initialized');
   };
   return (
-    <Box mb={5}>
-      <Typography variant='h2' className='heading'>
+    <Box mb={5} id='gallery'>
+      <Typography variant='h2' className='heading' sx={{fontWeight:'900'}}>
         our <span> gallery</span>
       </Typography>
       <LightGallery

@@ -44,8 +44,8 @@ const Blog = () => {
   };
 
   return (
-    <Container maxWidth='lg'>
-      <Typography className='heading' variant='h3'>
+    <Container maxWidth='lg' id='blog'>
+      <Typography className='heading' variant='h3' fontWeight={900}>
         <span>Blogs</span>
       </Typography>
 
