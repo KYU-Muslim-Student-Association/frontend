@@ -2,7 +2,6 @@ import React from 'react';
 import { Typography } from '@mui/material';
 import Slider from '../assets/one.jpg';
 
-
 const styles = {
   root: {
     display: 'flex',
@@ -45,8 +44,13 @@ export default function Hero() {
     <div style={styles.root}>
       <img src={Slider} style={styles.image} alt='Hero' />
       <div style={styles.container}>
-        <Typography variant='h2' style={styles.text} sx={{fontWeight:'900'}}>
-          KyUMSA COMMUNITY
+        <Typography
+          variant='h2'
+          style={styles.text}
+          sx={{ fontWeight: '900' }}
+          className='heading'
+        >
+          <span>KyU</span>MSA COMMUNITY
         </Typography>
       </div>
     </div>
