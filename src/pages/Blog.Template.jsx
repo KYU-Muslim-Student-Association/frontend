@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import ReactMarkdown from 'markdown-to-jsx';
 import { Container, Grid, Box, Typography, Button } from '@mui/material';
 import { DiscussionEmbed } from 'disqus-react';
+import Navigation from '../components/Navigation';
 
 function MarkdownListItem(props) {
   return <Box component='li' sx={{ mt: 1, typography: 'body1' }} {...props} />;
@@ -50,6 +51,7 @@ const options = {
 const BlogTemplate = () => {
   const [singleBlogPost, setSingleBlogPost] = React.useState({});
   const { id } = useParams();
+  
 
   // contentful client
   const client = createClient({
@@ -71,110 +73,115 @@ const BlogTemplate = () => {
   }, [client, id]); // Only re-run the effect if the id changes
 
   return (
-    <Container maxWidth='md'>
-      <Box xs={{ margin: '1rem 0' }}>
-        <Typography
-          variant='h4'
-          component='h4'
-          sx={{ textDecoration: 'none' }}
-          gutterBottom
-        >
-          <Link to='/'>Home</Link>
-        </Typography>
-        <header className='post-header'>
-          {singleBlogPost.fields && (
-            <img
-              src={`https:${singleBlogPost.fields.blogImage.fields.file.url}`}
-              title=''
-              alt={singleBlogPost.fields.title}
-              style={{
-                width: '100%',
-                maxWidth: '678px',
-                height: 'auto',
-                margin: '0 auto',
-              }}
-            />
-          )}
+    <>
+      <Navigation />
+      <Container maxWidth='md'>
+        <Box xs={{ margin: '1rem 0' }}>
+          <header className='post-header'>
+            {singleBlogPost.fields && (
+              <img
+                src={`https:${singleBlogPost.fields.blogImage.fields.file.url}`}
+                title=''
+                alt={singleBlogPost.fields.title}
+                style={{
+                  width: '100%',
+                  maxWidth: '878px',
+                  height: 'auto',
+                  margin: '0 auto',
+                }}
+              />
+            )}
 
-          <Typography variant='h4' component='h1' gutterBottom>
-            {singleBlogPost.fields && singleBlogPost.fields.blogTitle}
-          </Typography>
-          <Grid
-            container
-            sx={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}
-          >
-            <Grid item sx={{ marginRight: '0.5rem' }}>
-              By{' '}
-              <a href='/' className='post-author'>
-                {singleBlogPost.fields && singleBlogPost.fields.blogAuthor}
-              </a>
-            </Grid>
+            <Typography
+              variant='h3'
+              component='h1'
+              gutterBottom
+              fontWeight={900}
+            >
+              {singleBlogPost.fields && singleBlogPost.fields.blogTitle}
+            </Typography>
             <Grid
-              item
-              sx={{ fontSize: '0.875rem', color: 'rgba(0, 0, 0, 0.54)' }}
+              container
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                marginBottom: '1rem',
+              }}
             >
-              {singleBlogPost.fields &&
-                singleBlogPost.fields.createDate &&
-                new Intl.DateTimeFormat('en-GB', {
-                  month: 'long',
-                  day: '2-digit',
-                  year: 'numeric',
-                }).format(new Date(singleBlogPost.fields.createDate))}
+              <Grid item sx={{ marginRight: '0.5rem' }}>
+                By{' '}
+                <a href='/' className='post-author'>
+                  {singleBlogPost.fields && singleBlogPost.fields.blogAuthor}
+                </a>
+              </Grid>
+              <Grid
+                item
+                sx={{ fontSize: '0.875rem', color: 'rgba(0, 0, 0, 0.54)' }}
+              >
+                {singleBlogPost.fields &&
+                  singleBlogPost.fields.createDate &&
+                  new Intl.DateTimeFormat('en-GB', {
+                    month: 'long',
+                    day: '2-digit',
+                    year: 'numeric',
+                  }).format(new Date(singleBlogPost.fields.createDate))}
+              </Grid>
             </Grid>
-          </Grid>
-        </header>
-        <Typography
-          sx={{ fontSize: '1rem', lineHeight: 1.5 }}
-          variant='body1'
-          component='div'
-        >
-          {singleBlogPost.fields && (
-            <ReactMarkdown
-              options={options}
-              children={singleBlogPost.fields.postContent}
-            />
-          )}
-        </Typography>
-      </Box>
-      <DiscussionEmbed
-        shortname='kyumsa'
-        config={{
-          url: 'http://localhost:3000',
-          identifier: id,
-          title: singleBlogPost?.fields?.blogTitle,
-          language: 'en', //e.g. for Traditional Chinese (Taiwan)
-        }}
-      />
+          </header>
+          <Typography
+            sx={{ fontSize: '1rem', lineHeight: 1.5 }}
+            variant='body1'
+            component='div'
+          >
+            {singleBlogPost.fields && (
+              <ReactMarkdown
+                options={options}
+                children={singleBlogPost.fields.postContent}
+              />
+            )}
+          </Typography>
+        </Box>
+        <DiscussionEmbed
+          shortname='kyumsa'
+          config={{
+            url: 'http://localhost:3000',
+            identifier: id,
+            title: 'Testing',
+            language: 'en', //e.g. for Traditional Chinese (Taiwan)
+          }}
+        />
+       
 
-      <footer
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          marginTop: '1rem',
-        }}
-      >
-        <Button
-          sx={{ marginRight: '1rem' }}
-          variant='outlined'
-          color='primary'
-          component={Link}
-          to='/blogs'
+        <footer
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            marginTop: '1rem',
+          }}
         >
-          Back to Blogs
-        </Button>
-        <div className='pure-menu pure-menu-horizontal'>
-          <div className='pure-menu-item'>
-            <a
-              href='http://twitter.com/thecodeangle'
-              className='pure-menu-link'
-            >
-              Twitter
-            </a>
+          <Button
+            sx={{ marginRight: '1rem' }}
+            variant='outlined'
+            color='primary'
+            component={Link}
+            to='/blogs'
+          >
+            Back to Blogs
+          </Button>
+          <div className='pure-menu pure-menu-horizontal'>
+            <div className='pure-menu-item'>
+              <a
+                href='http://twitter.com/thecodeangle'
+                className='pure-menu-link'
+              >
+                Twitter
+              </a>
+            </div>
           </div>
-        </div>
-      </footer>
-    </Container>
+        </footer>
+      </Container>
+    </>
   );
 };
 
