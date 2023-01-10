@@ -28,7 +28,7 @@ const Blog = () => {
     };
 
     getAllEntries();
-  }, [client]);
+  }, );
   let items = [];
   const responsive = {
     0: {

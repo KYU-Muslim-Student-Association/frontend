@@ -4,6 +4,7 @@ import { createClient } from 'contentful';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'markdown-to-jsx';
 import { Container, Grid, Box, Typography, Button } from '@mui/material';
+import { DiscussionEmbed } from 'disqus-react';
 
 function MarkdownListItem(props) {
   return <Box component='li' sx={{ mt: 1, typography: 'body1' }} {...props} />;
@@ -50,6 +51,7 @@ const BlogTemplate = () => {
   const [singleBlogPost, setSingleBlogPost] = React.useState({});
   const { id } = useParams();
 
+  // contentful client
   const client = createClient({
     space: 'whl0ksckl8aj',
     accessToken: 'ga3QyyQ7CzFfHql_YPDNfH7hszJzI8muREAJEYXcTgs',
@@ -134,6 +136,16 @@ const BlogTemplate = () => {
           )}
         </Typography>
       </Box>
+      <DiscussionEmbed
+        shortname='kyumsa'
+        config={{
+          url: 'http://localhost:3000',
+          identifier: id,
+          title: singleBlogPost?.fields?.blogTitle,
+          language: 'en', //e.g. for Traditional Chinese (Taiwan)
+        }}
+      />
+
       <footer
         style={{
           display: 'flex',
