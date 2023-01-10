@@ -51,7 +51,6 @@ const options = {
 const BlogTemplate = () => {
   const [singleBlogPost, setSingleBlogPost] = React.useState({});
   const { id } = useParams();
-  
 
   // contentful client
   const client = createClient({
@@ -144,13 +143,12 @@ const BlogTemplate = () => {
         <DiscussionEmbed
           shortname='kyumsa'
           config={{
-            url: 'http://localhost:3000',
-            identifier: id,
-            title: 'Testing',
-            language: 'en', //e.g. for Traditional Chinese (Taiwan)
+            url: `https://kyumsa.netlify.com/blogs/${id}`,
+            identifier: id + '_0',
+            title: singleBlogPost.fields && singleBlogPost.fields.blogTitle,
+            language: 'en',
           }}
         />
-       
 
         <footer
           style={{
@@ -171,10 +169,7 @@ const BlogTemplate = () => {
           </Button>
           <div className='pure-menu pure-menu-horizontal'>
             <div className='pure-menu-item'>
-              <a
-                href='http://twitter.com/thecodeangle'
-                className='pure-menu-link'
-              >
+              <a href='https://twitter.com/kyumsa' className='pure-menu-link'>
                 Twitter
               </a>
             </div>
