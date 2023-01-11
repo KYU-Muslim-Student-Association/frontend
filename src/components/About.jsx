@@ -13,7 +13,13 @@ import {
 const About = () => {
   return (
     <Container id='about' maxWidth='xl'>
-      <Typography variant='h2' className='heading' sx={{fontWeight:'900'}} my={6} mx={2}>
+      <Typography
+        variant='h2'
+        className='heading'
+        sx={{ fontWeight: '900' }}
+        my={6}
+        mx={2}
+      >
         <span>about</span> us
       </Typography>
       <Grid container spacing={3}>
@@ -55,7 +61,14 @@ const About = () => {
                 variant='contained'
                 style={{ backgroundColor: '#c98d83' }}
               >
-                Read More
+                <a
+                  style={{ color: 'white', textDecoration: 'none' }}
+                  href='https://forms.office.com/r/HKFLTdbKsy'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Register
+                </a>
               </Button>
             </CardContent>
           </Card>
