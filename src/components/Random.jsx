@@ -29,7 +29,7 @@ const Random = () => {
           });
         });
 
-      console.log(verse);
+      
     } catch (error) {
       console.log(error);
     }
