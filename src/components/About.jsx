@@ -12,8 +12,8 @@ import {
 
 const About = () => {
   return (
-    <Container id='about'>
-      <Typography variant='h2' className='heading' sx={{fontWeight:'900'}}>
+    <Container id='about' maxWidth='xl'>
+      <Typography variant='h2' className='heading' sx={{fontWeight:'900'}} my={6} mx={2}>
         <span>about</span> us
       </Typography>
       <Grid container spacing={3}>

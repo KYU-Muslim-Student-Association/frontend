@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 :root {
   --primary-color: #c98d83;
   --secondary: #783b31;
@@ -399,4 +400,7 @@ section {
   }
 }
 
-
+.greeting-img{
+  -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
+}

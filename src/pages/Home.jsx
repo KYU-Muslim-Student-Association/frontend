@@ -7,6 +7,7 @@ import Scholars from '../components/Scholars';
 import ContactUs from '../components/ContactUs';
 import Footer from '../components/Footer';
 import Blog from '../components/Blog';
+import PrayerTime from '../components/PrayerTime';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Navigation />
       <Slides />
       <About />
+      <PrayerTime />
       <Gallery />
       <Scholars />
       <Blog />
