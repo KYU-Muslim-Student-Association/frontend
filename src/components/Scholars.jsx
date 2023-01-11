@@ -12,10 +12,16 @@ import Grid from '@mui/material/Grid';
 
 const Scholars = () => {
   return (
-    <Box sx={{ margin: { xs: '2rem', md: '6rem' } }} id='leaders'>
-      <Typography variant='h3' className='heading' sx={{fontWeight:'900'}}>
+    <Box sx={{ margin: { xs: '2rem', md: '12rem' } }} id='leaders'>
+      <Typography
+        variant='h3'
+        className='heading'
+        sx={{ fontWeight: '900' }}
+        my={4}
+      >
         <span>Our</span> Leadership <span>Team</span>
       </Typography>
+
       <Grid container spacing={1}>
         <Grid item xs={12} sm={6} md={4}>
           <MultiActionAreaCard

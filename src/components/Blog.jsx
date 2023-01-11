@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
 
 import MediaCard from '../components/BlogCard';
@@ -15,21 +15,21 @@ const Blog = () => {
     withCredentials: false,
   });
 
-  const [blogs, setBlogs] = React.useState([]);
-  React.useEffect(() => {
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
     const getAllEntries = async () => {
       try {
-        await client.getEntries().then((response) => {
-          setBlogs(response);
-        });
+        const response = await client.getEntries()
+        setBlogs(response);
       } catch (error) {
         console.log(error);
       }
     };
 
     getAllEntries();
-  }, );
-  let items = [];
+  }, [client]);
+
+  const [items, setItems] = useState([]);
   const responsive = {
     0: {
       items: 1,
@@ -41,29 +41,37 @@ const Blog = () => {
       items: 3,
       itemsFit: 'contain',
     },
+    1570: {
+      items: 4,
+      itemsFit: 'contain',
+    },
   };
+  
+  useEffect(() => {
+    const newItems = blogs?.items?.map((blog, index) => {
+          return(
+            <MediaCard
+              name={blog.fields.blogTitle}
+              bio={blog.fields.blogSummary}
+              img={blog.fields.blogImage.fields.file.url}
+              id={blog.sys.id}
+              key={index}
+            />
+          );
+        });
+    setItems(newItems)
+  }, [blogs])
 
   return (
-    <Container maxWidth='lg' id='blog'>
+    <Container maxWidth='xl' id='blog'>
       <Typography className='heading' variant='h3' fontWeight={900}>
         <span>Blogs</span>
       </Typography>
-
-      {/* eslint-disable-next-line array-callback-return */}
-      {blogs?.items?.map((blog, index) => {
-        items = [
-          ...items,
-          <MediaCard
-            name={blog.fields.blogTitle}
-            bio={blog.fields.blogSummary}
-            img={blog.fields.blogImage.fields.file.url}
-            id={blog.sys.id}
-            key={index}
-          />,
-        ];
-      })}
-
-      <AliceCarousel mouseTracking items={items} responsive={responsive} />
+      {
+        items && items.length > 0 ?
+        <AliceCarousel mouseTracking items={items} responsive={responsive} />
+        : null
+      }
     </Container>
   );
 };
