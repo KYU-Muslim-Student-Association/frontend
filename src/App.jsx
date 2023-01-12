@@ -5,9 +5,11 @@ import Blog from './pages/Blog';
 import NotFound from './components/404Page';
 import BlogTemplate from './pages/Blog.Template';
 
+
 function App() {
   return (
     <div className='App'>
+     
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/blogs' element={<Blog />} />
