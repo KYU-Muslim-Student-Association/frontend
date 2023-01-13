@@ -53,7 +53,7 @@ export default function Hero() {
       <div style={styles.container}>
         <Container>
           <img
-            class='hero__image-above-heading fade-in mx-auto mb-3 lazyautosizes ls-is-cached lazyloaded'
+            className='hero__image-above-heading fade-in mx-auto mb-3 lazyautosizes ls-is-cached lazyloaded'
             src='//cdn.shopify.com/s/files/1/0609/7826/6347/files/bismillah_white_300x.webp?v=1660863167'
             data-widths='[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048, 4472]'
             data-aspectratio='6.35609756097561'
