@@ -8,6 +8,7 @@ import team3 from '../assets/images/team-3.png';
 import MultiActionAreaCard from './Card';
 import Typography from '@mui/material/Typography';
 
+
 import Grid from '@mui/material/Grid';
 
 const Scholars = () => {
@@ -48,6 +49,35 @@ const Scholars = () => {
             props={{ display: 'blog' }}
           />
         </Grid>
+
+       
+        
+        <Grid item xs={12} sm={6} md={4} mt={5}>
+          <MultiActionAreaCard
+            name='Abubakar Ali'
+            bio='FullStack Developer'
+            img={team2}
+            props={{ display: 'blog' }}
+          />
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={4} mt={5}>
+          <MultiActionAreaCard
+            name='Salah Maalim'
+            bio='Frontend Developer'
+            img={team3}
+            props={{ display: 'blog' }}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} mt={5}>
+          <MultiActionAreaCard
+            name='Hamisi Mohamed'
+            bio='Backend Developer'
+            img={team1}
+            props={{ display: 'blog' }}
+          />
+        </Grid>
+
       </Grid>
     </Box>
   );

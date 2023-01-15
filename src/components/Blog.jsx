@@ -19,7 +19,7 @@ const Blog = () => {
   useEffect(() => {
     const getAllEntries = async () => {
       try {
-        const response = await client.getEntries()
+        const response = await client.getEntries();
         setBlogs(response);
       } catch (error) {
         console.log(error);
@@ -46,32 +46,30 @@ const Blog = () => {
       itemsFit: 'contain',
     },
   };
-  
+
   useEffect(() => {
     const newItems = blogs?.items?.map((blog, index) => {
-          return(
-            <MediaCard
-              name={blog.fields.blogTitle}
-              bio={blog.fields.blogSummary}
-              img={blog.fields.blogImage.fields.file.url}
-              id={blog.sys.id}
-              key={index}
-            />
-          );
-        });
-    setItems(newItems)
-  }, [blogs])
+      return (
+        <MediaCard
+          name={blog.fields.blogTitle}
+          bio={blog.fields.blogSummary}
+          img={blog.fields.blogImage.fields.file.url}
+          id={blog.sys.id}
+          key={index}
+        />
+      );
+    });
+    setItems(newItems);
+  }, [blogs]);
 
   return (
     <Container maxWidth='xl' id='blog'>
       <Typography className='heading' variant='h3' fontWeight={900}>
         <span>Blogs</span>
       </Typography>
-      {
-        items && items.length > 0 ?
+      {items && items.length > 0 ? (
         <AliceCarousel mouseTracking items={items} responsive={responsive} />
-        : null
-      }
+      ) : null}
     </Container>
   );
 };
