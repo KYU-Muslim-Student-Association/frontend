@@ -27,7 +27,7 @@ const Blog = () => {
     };
 
     getAllEntries();
-  }); 
+  },[client]); 
   return (
     <div>
       <>
