@@ -111,12 +111,14 @@ function ResponsiveAppBar() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <a
-                      href={'#' + page.toLowerCase()}
+                    <Typography
+                      onClick={() =>
+                        window.location.replace(`/#${page.toLowerCase()}`)
+                      }
                       style={{ textDecoration: 'none' }}
                     >
                       {page}
-                    </a>
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>

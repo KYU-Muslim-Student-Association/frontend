@@ -18,6 +18,7 @@ function App() {
         <Suspense fallback={<PropagateLoader color='#36d7b7' />}>
           <Routes>
             <Route path='/' element={<Home />} />
+
             <Route path='/blogs' element={<Blog />} />
             <Route path='/blogs/:id' element={<BlogTemplate />} />
 
