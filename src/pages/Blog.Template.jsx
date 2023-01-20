@@ -109,9 +109,9 @@ const BlogTemplate = () => {
             >
               <Grid item sx={{ marginRight: '0.5rem' }}>
                 By{' '}
-                <a href='/' className='post-author'>
+                <Typography variant='body1' fontWeight={800}>
                   {singleBlogPost.fields && singleBlogPost.fields.blogAuthor}
-                </a>
+                </Typography>
               </Grid>
               <Grid
                 item
