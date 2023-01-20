@@ -12,7 +12,6 @@ import PrayerTime from '../components/PrayerTime';
 const Home = () => {
   return (
     <>
-    
       <Navigation />
       <Slides />
       <About />

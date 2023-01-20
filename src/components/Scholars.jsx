@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Box } from '@mui/material';
 //import team images
-import team1 from '../assets/images/team-1.png';
 import DaawaCordinator from '../assets/leaders/AbdiRashid.jpeg';
 import Chairman from '../assets/leaders/Chairman.jpeg';
 import Welfare from '../assets/leaders/Faraji.jpeg';
-import Secretary from '../assets/leaders/Secretary.jpeg'
-import Treasurer from '../assets/leaders/juma.jpeg'
+import Secretary from '../assets/leaders/Secretary.jpeg';
+import Treasurer from '../assets/leaders/juma.jpeg';
+import Assistant from '../assets/leaders/Assistant Chairman.jpeg';
 import MultiActionAreaCard from './Card';
 import Typography from '@mui/material/Typography';
 
@@ -36,8 +36,16 @@ const Scholars = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={4} mt={5}>
           <MultiActionAreaCard
+            name='Abdirahman Hassan'
+            bio='Assistant Chairman'
+            img={Assistant}
+            props={{ display: 'blog' }}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} mt={5}>
+          <MultiActionAreaCard
             name='AbdiRashid'
-            bio='Daawa Cordinator'
+            bio="Daa'wa Cordinator"
             img={DaawaCordinator}
             props={{ display: 'blog' }}
           />
@@ -64,16 +72,8 @@ const Scholars = () => {
         <Grid item xs={12} sm={6} md={4} mt={5}>
           <MultiActionAreaCard
             name='Juma Hamisi'
-            bio='Frontend Developer'
+            bio='Treasurer'
             img={Treasurer}
-            props={{ display: 'blog' }}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} mt={5}>
-          <MultiActionAreaCard
-            name='Hamisi Mohamed'
-            bio='Backend Developer'
-            img={team1}
             props={{ display: 'blog' }}
           />
         </Grid>

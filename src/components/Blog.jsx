@@ -27,7 +27,7 @@ const Blog = () => {
     };
 
     getAllEntries();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [items, setItems] = useState([]);
@@ -55,7 +55,7 @@ const Blog = () => {
           name={blog.fields.blogTitle}
           bio={blog.fields.blogSummary}
           img={blog.fields.blogImage.fields.file.url}
-          id={index}
+          id={blog.sys.id}
           key={index}
         />
       );
@@ -63,10 +63,8 @@ const Blog = () => {
     setItems(newItems);
   }, [blogs]);
 
-
-
   return (
-    <Container maxWidth='xl' id='blog'>
+    <Container maxWidth='lg' id='blog'>
       <Typography className='heading' variant='h3' fontWeight={900}>
         <span>Blogs</span>
       </Typography>

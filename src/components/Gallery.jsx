@@ -1,10 +1,10 @@
 import React from 'react';
-import Gallery2 from '../assets/images/gallery2.jpg';
-import Gallery1 from '../assets/images/gallery1.jpg';
-import Gallery3 from '../assets/images/gallery3.jpg';
-import Gallery4 from '../assets/images/gallery4.jpg';
-import Gallery5 from '../assets/images/gallery5.jpg';
-import Gallery6 from '../assets/images/gallery6.jpg';
+import Gallery1 from '../assets/events/event3.jpeg';
+import Gallery2 from '../assets/events/event9.jpeg';
+import Gallery3 from '../assets/events/event8.jpeg';
+import Gallery4 from '../assets/events/event4.jpeg';
+import Gallery5 from '../assets/events/event10.jpeg';
+import Gallery6 from '../assets/events/event7.jpeg';
 
 import LightGallery from 'lightgallery/react';
 import Typography from '@mui/material/Typography';
@@ -34,7 +34,18 @@ const Gallery = () => {
         plugins={[lgThumbnail, lgZoom]}
         elementClassNames='lightbox'
       >
-        <a href={Gallery2} className='column' style={{ display: 'grid' }}>
+        <a href={Gallery1} className='column'>
+          <img
+            src={Gallery1}
+            alt=''
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          />
+          <div className='icons'>
+            <i className='fas fa-plus'></i>
+          </div>
+        </a>
+
+        <a href={Gallery2} className='column'>
           <img
             src={Gallery2}
             alt=''
@@ -81,17 +92,6 @@ const Gallery = () => {
         <a href={Gallery6} className='column'>
           <img
             src={Gallery6}
-            alt=''
-            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-          />
-          <div className='icons'>
-            <i className='fas fa-plus'></i>
-          </div>
-        </a>
-
-        <a href={Gallery1} className='column'>
-          <img
-            src={Gallery1}
             alt=''
             style={{ height: '100%', width: '100%', objectFit: 'cover' }}
           />
