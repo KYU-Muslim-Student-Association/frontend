@@ -3,11 +3,13 @@ import React from 'react';
 import { Box } from '@mui/material';
 //import team images
 import team1 from '../assets/images/team-1.png';
-import team2 from '../assets/images/team-2.png';
-import team3 from '../assets/images/team-3.png';
+import DaawaCordinator from '../assets/leaders/AbdiRashid.jpeg';
+import Chairman from '../assets/leaders/Chairman.jpeg';
+import Welfare from '../assets/leaders/Faraji.jpeg';
+import Secretary from '../assets/leaders/Secretary.jpeg'
+import Treasurer from '../assets/leaders/juma.jpeg'
 import MultiActionAreaCard from './Card';
 import Typography from '@mui/material/Typography';
-
 
 import Grid from '@mui/material/Grid';
 
@@ -24,48 +26,46 @@ const Scholars = () => {
       </Typography>
 
       <Grid container spacing={1}>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={4} mt={5}>
           <MultiActionAreaCard
             name='Ismail Kodi'
             bio='Chairman'
-            img={team1}
+            img={Chairman}
+            props={{ display: 'blog' }}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} mt={5}>
+          <MultiActionAreaCard
+            name='AbdiRashid'
+            bio='Daawa Cordinator'
+            img={DaawaCordinator}
             props={{ display: 'blog' }}
           />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={4} mt={5}>
           <MultiActionAreaCard
-            name='Abdarahman'
-            bio='Assistant Chairman'
-            img={team2}
+            name='Faraji Wabuko'
+            bio='Welfare Secretary'
+            img={Welfare}
             props={{ display: 'blog' }}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+
+        <Grid item xs={12} sm={6} md={4} mt={5}>
+          <MultiActionAreaCard
+            name='Thwalha'
+            bio='Secretary'
+            img={Secretary}
+            props={{ display: 'blog' }}
+          />
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={4} mt={5}>
           <MultiActionAreaCard
             name='Juma Hamisi'
-            bio='Treasurer'
-            img={team3}
-            props={{ display: 'blog' }}
-          />
-        </Grid>
-
-       
-        
-        <Grid item xs={12} sm={6} md={4} mt={5}>
-          <MultiActionAreaCard
-            name='Abubakar Ali'
-            bio='FullStack Developer'
-            img={team2}
-            props={{ display: 'blog' }}
-          />
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={4} mt={5}>
-          <MultiActionAreaCard
-            name='Salah Maalim'
             bio='Frontend Developer'
-            img={team3}
+            img={Treasurer}
             props={{ display: 'blog' }}
           />
         </Grid>
@@ -77,7 +77,6 @@ const Scholars = () => {
             props={{ display: 'blog' }}
           />
         </Grid>
-
       </Grid>
     </Box>
   );
