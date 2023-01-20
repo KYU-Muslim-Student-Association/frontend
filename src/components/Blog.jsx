@@ -27,7 +27,8 @@ const Blog = () => {
     };
 
     getAllEntries();
-  }, [client]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const [items, setItems] = useState([]);
   const responsive = {
@@ -54,13 +55,15 @@ const Blog = () => {
           name={blog.fields.blogTitle}
           bio={blog.fields.blogSummary}
           img={blog.fields.blogImage.fields.file.url}
-          id={blog.sys.id}
+          id={index}
           key={index}
         />
       );
     });
     setItems(newItems);
   }, [blogs]);
+
+
 
   return (
     <Container maxWidth='xl' id='blog'>
