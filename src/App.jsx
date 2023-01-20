@@ -1,21 +1,30 @@
 import './App.css';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Blog from './pages/Blog';
-import NotFound from './components/404Page';
-import BlogTemplate from './pages/Blog.Template';
+import { Suspense } from 'react';
+import { PropagateLoader } from 'react-spinners';
+
+const Home = React.lazy(() => import('./pages/Home'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const NotFound = React.lazy(() => import('./components/404Page'));
+const BlogTemplate = React.lazy(() => import('./pages/Blog.Template'));
+const ErrorBoundary = React.lazy(() => import('./utils/ErrorBoundary'));
 
 function App() {
   return (
     <div className='App'>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/blogs' element={<Blog />} />
-        <Route path='/blogs/:id' element={<BlogTemplate />} />
+      <ErrorBoundary>
+        <Suspense fallback={<PropagateLoader color='#36d7b7' />}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/blogs' element={<Blog />} />
+            <Route path='/blogs/:id' element={<BlogTemplate />} />
 
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 }

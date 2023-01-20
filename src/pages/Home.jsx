@@ -1,13 +1,14 @@
 import React from 'react';
-import About from '../components/About';
-import Navigation from '../components/Navigation';
-import Slides from '../components/Swiper';
-import Gallery from '../components/Gallery';
-import Scholars from '../components/Scholars';
-import ContactUs from '../components/ContactUs';
-import Footer from '../components/Footer';
-import Blog from '../components/Blog';
-import PrayerTime from '../components/PrayerTime';
+
+const Navigation = React.lazy(() => import('../components/Navigation'));
+const Slides = React.lazy(() => import('../components/Swiper'));
+const About = React.lazy(() => import('../components/About'));
+const Gallery = React.lazy(() => import('../components/Gallery'));
+const Scholars = React.lazy(() => import('../components/Scholars'));
+const ContactUs = React.lazy(() => import('../components/ContactUs'));
+const Footer = React.lazy(() => import('../components/Footer'));
+const Blog = React.lazy(() => import('../components/Blog'));
+const PrayerTime = React.lazy(() => import('../components/PrayerTime'));
 
 const Home = () => {
   return (

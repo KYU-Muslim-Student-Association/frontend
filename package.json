@@ -29,6 +29,7 @@
     "react-router-dom": "^6.4.5",
     "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
+    "react-spinners": "^0.13.8",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.5",
@@ -49,7 +50,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "start-sw":"npm run build && http-server ./build",
+    "start-sw": "npm run build && http-server ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
