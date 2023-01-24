@@ -10,6 +10,7 @@ const Blog = React.lazy(() => import('./pages/Blog'));
 const NotFound = React.lazy(() => import('./components/404Page'));
 const BlogTemplate = React.lazy(() => import('./pages/Blog.Template'));
 const ErrorBoundary = React.lazy(() => import('./utils/ErrorBoundary'));
+const Test = React.lazy(() => import('./pages/Test'));
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Suspense fallback={<PropagateLoader color='#36d7b7' />}>
           <Routes>
             <Route path='/' element={<Home />} />
-
+            <Route path='/test' element={<Test />} />
             <Route path='/blogs' element={<Blog />} />
             <Route path='/blogs/:id' element={<BlogTemplate />} />
 
