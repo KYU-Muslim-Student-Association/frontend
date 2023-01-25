@@ -9,6 +9,7 @@ const ContactUs = React.lazy(() => import('../components/ContactUs'));
 const Footer = React.lazy(() => import('../components/Footer'));
 const Blog = React.lazy(() => import('../components/Blog'));
 const PrayerTime = React.lazy(() => import('../components/PrayerTime'));
+const CalendarEvent = React.lazy(() => import('../components/CalendarEvent'));
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <PrayerTime />
       <Gallery />
       <Scholars />
+      <CalendarEvent />
       <Blog />
       <ContactUs />
       <Footer />

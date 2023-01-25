@@ -64,7 +64,7 @@ const Blog = () => {
   }, [blogs]);
 
   return (
-    <Container maxWidth='lg' id='blog'>
+    <Container maxWidth='xl' id='blog' mt={3}>
       <Typography className='heading' variant='h3' fontWeight={900}>
         <span>Blogs</span>
       </Typography>
